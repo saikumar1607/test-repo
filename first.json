@@ -1,0 +1,14 @@
+{
+  "features" : [ {
+    "name" : "discount",
+    "feature_id" : "discount",
+    "type" : "NUMERIC",
+    "enabled_value" : 25,
+    "disabled_value" : 5,
+    "segment_rules" : [ ],
+    "enabled" : false,
+    "rollout_percentage" : 60
+  } ],
+  "properties" : [ ],
+  "segments" : [ ]
+}
