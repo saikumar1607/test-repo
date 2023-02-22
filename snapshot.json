@@ -1,0 +1,14 @@
+{
+  "features" : [ {
+    "name" : "testfeature",
+    "feature_id" : "testfeature",
+    "type" : "BOOLEAN",
+    "enabled_value" : true,
+    "disabled_value" : false,
+    "segment_rules" : [ ],
+    "enabled" : false,
+    "rollout_percentage" : 100
+  } ],
+  "properties" : [ ],
+  "segments" : [ ]
+}
