@@ -1,0 +1,169 @@
+{
+  "features" : [ {
+    "name" : "Updated test-feature-boolean",
+    "feature_id" : "test-feature-boolean",
+    "type" : "BOOLEAN",
+    "enabled_value" : false,
+    "disabled_value" : true,
+    "segment_rules" : [ ],
+    "enabled" : true,
+    "rollout_percentage" : 88
+  }, {
+    "name" : "Updated test-feature-json",
+    "feature_id" : "test-feature-json",
+    "type" : "STRING",
+    "format" : "JSON",
+    "enabled_value" : [ {
+      "key" : "val"
+    }, {
+      "key1" : "val1"
+    } ],
+    "disabled_value" : [ "Rock", "Paper", "scissor" ],
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : 25,
+      "order" : 1,
+      "rollout_percentage" : 100
+    } ],
+    "enabled" : true,
+    "rollout_percentage" : 100
+  }, {
+    "name" : "Updated test-feature-numeric",
+    "feature_id" : "test-feature-numeric",
+    "type" : "NUMERIC",
+    "enabled_value" : 15,
+    "disabled_value" : -5,
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : 25,
+      "order" : 1,
+      "rollout_percentage" : 100
+    } ],
+    "enabled" : false,
+    "rollout_percentage" : 60
+  }, {
+    "name" : "Updated test-feature-string",
+    "feature_id" : "test-feature-string",
+    "type" : "STRING",
+    "format" : "TEXT",
+    "enabled_value" : "updated enabled string",
+    "disabled_value" : "updated disabled string",
+    "segment_rules" : [ ],
+    "enabled" : false,
+    "rollout_percentage" : 90
+  }, {
+    "name" : "Updated test-feature-yaml",
+    "feature_id" : "test-feature-yaml",
+    "type" : "STRING",
+    "format" : "YAML",
+    "enabled_value" : "---\navailability: 'yes'\npremium_user_ids:\n- custId1\n- custId2",
+    "disabled_value" : "---\nemployees_id:\n- empId100",
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : 25,
+      "order" : 1,
+      "rollout_percentage" : 100
+    } ],
+    "enabled" : true,
+    "rollout_percentage" : 100
+  } ],
+  "properties" : [ {
+    "name" : "Updated test-property-boolean",
+    "property_id" : "test-property-boolean",
+    "tags" : "v2, bool2",
+    "type" : "BOOLEAN",
+    "value" : true,
+    "segment_rules" : [ ]
+  }, {
+    "name" : "Updated test-property-json",
+    "property_id" : "test-property-json",
+    "tags" : "v2, jsontag2",
+    "type" : "STRING",
+    "format" : "JSON",
+    "value" : {
+      "key1" : "value1",
+      "age" : 20,
+      "paid" : false
+    },
+    "segment_rules" : [ ]
+  }, {
+    "name" : "Updated test-property-numeric",
+    "property_id" : "test-property-numeric",
+    "tags" : "v2, num2",
+    "type" : "NUMERIC",
+    "value" : 0,
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : -85,
+      "order" : 1
+    } ]
+  }, {
+    "name" : "Updated test-property-secretref",
+    "property_id" : "test-property-secretref",
+    "tags" : "v2, num2",
+    "type" : "SECRETREF",
+    "value" : {
+      "secret_type" : "kv",
+      "id" : "1312414-12341243fdsf-324dfsg-43fffg",
+      "sm_instance_crn" : "crn:v1:staging:public:secrets-manager:us-south:a/7bf663503fc5e2e06b03d2ada843bf54:ssfffgr-f6ee-48a5-a11b-ade4aecfe378::"
+    },
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : {
+        "id" : "1312414-12341243fdsf-324dfsg-43fffg"
+      },
+      "order" : 1
+    } ]
+  }, {
+    "name" : "Updated test-property-string",
+    "property_id" : "test-property-string",
+    "tags" : "v2, str2",
+    "type" : "STRING",
+    "format" : "TEXT",
+    "value" : "updated string in first env",
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : "first env overrided string",
+      "order" : 1
+    } ]
+  }, {
+    "name" : "Updated test-property-yaml",
+    "property_id" : "test-property-yaml",
+    "tags" : "v2, yaml2",
+    "type" : "STRING",
+    "format" : "YAML",
+    "value" : "men:\n - John Smith\n - Bill Jones\nwomen:\n - Mary Smith\n - Susan Williams",
+    "segment_rules" : [ {
+      "rules" : [ {
+        "segments" : [ "test-segment" ]
+      } ],
+      "value" : "men:\n - John Smith\n - Bill Jones\nwomen:\n - Mary Smith\n - Susan Williams",
+      "order" : 1
+    } ]
+  } ],
+  "segments" : [ {
+    "name" : "Updated test-segment",
+    "segment_id" : "test-segment",
+    "rules" : [ {
+      "values" : [ "ibm.com", "gmail.com" ],
+      "operator" : "endsWith",
+      "attribute_name" : "email"
+    }, {
+      "values" : [ "14" ],
+      "operator" : "lesserThan",
+      "attribute_name" : "number"
+    } ]
+  } ]
+}
