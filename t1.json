@@ -1,0 +1,24 @@
+{
+  "environments" : [ {
+    "name" : "Dev",
+    "environment_id" : "dev",
+    "features" : [ ],
+    "properties" : [ {
+      "name" : "p2",
+      "property_id" : "p2",
+      "tags" : "",
+      "type" : "BOOLEAN",
+      "value" : true,
+      "segment_rules" : [ ],
+      "collections" : [ {
+        "collection_id" : "c3",
+        "name" : "c3"
+      } ]
+    } ]
+  } ],
+  "collections" : [ {
+    "name" : "c3",
+    "collection_id" : "c3"
+  } ],
+  "segments" : [ ]
+}
