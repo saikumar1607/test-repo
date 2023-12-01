@@ -1,0 +1,26 @@
+{
+  "environments" : [ {
+    "name" : "Dev",
+    "environment_id" : "dev",
+    "features" : [ {
+      "name" : "pe",
+      "feature_id" : "pe",
+      "type" : "BOOLEAN",
+      "enabled_value" : true,
+      "disabled_value" : false,
+      "segment_rules" : [ ],
+      "collections" : [ {
+        "collection_id" : "c5",
+        "name" : "c5"
+      } ],
+      "enabled" : false,
+      "rollout_percentage" : 100
+    } ],
+    "properties" : [ ]
+  } ],
+  "collections" : [ {
+    "name" : "c5",
+    "collection_id" : "c5"
+  } ],
+  "segments" : [ ]
+}
